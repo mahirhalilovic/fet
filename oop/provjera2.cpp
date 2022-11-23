@@ -2,7 +2,11 @@
  u nekom stringu korektno zatvorene, te shodno tome vraca tacno ili netacno. Primjer: 
  { [ ( ) ] } -> True
  { [ 3 * ( 2 + 3 ) + 2 ] } -> True
- { [ ( ) } ] -> False */
+ { [ ( ) } ] -> False 
+
+Zatim napisati main funkciju tako da korisnik unosi recenice sve dok ne unese EOF karakter.
+Za svaki unos pozvati funkciju provjeri_zagrade() i kao rezultat ispisati "OK", ako je 
+povratna vrijednost true, odnosno ispisati "Error", ako je povratna vrijednost false. */
 
 #include <iostream>
 #include <vector>
