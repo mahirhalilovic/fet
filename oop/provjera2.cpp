@@ -48,7 +48,10 @@ bool provjeri_zagrade(string str) {
         return false;
   }
 
-  return true;
+  if(otv.emtpy())
+    return true;
+  else
+    return false;
 }
 
 int main() {
