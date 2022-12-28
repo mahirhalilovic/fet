@@ -1,1 +1,37 @@
-test :)
+include <iostream>
+#include <vector>
+#include <list>
+#include <functional>
+
+template <typename T, typename U>
+typename T::value_type folder (typename T::value_type poc, T begin, T end,U f) {
+
+  if (begin == end)
+    {
+      throw std::string{"Sekvenca je prazna."};
+    } else {
+      end--;
+
+      while (begin != end) {
+			  poc = f (*end, poc);
+				end--;
+		}
+			poc = f (*end, poc);
+    }
+
+  return poc;
+}
+
+int main () {
+
+  std::list<int> l{5, 7, 4, 11};
+  int s = 7;
+
+  auto m = [] (int a, int b) {return a + b;};
+
+  s = folder (s, l.begin (), l.end (), m);
+
+  std::cout << s;
+
+  return 0;
+}
